@@ -5,7 +5,11 @@ from app.routers import auth, products, offers, recipes, orders, shipping, track
 from app.db import Base, engine
 
 app = FastAPI(title=settings.APP_NAME)
-origins = [o.strip() for o in settings.CORS_ORIGINS.split(",")]
+# origins = [o.strip() for o in settings.CORS_ORIGINS.split(",")]
+origins = [
+    "http://localhost:5173",          # Vite dev
+    "https://sooqly-app.vercel.app"         # <-- replace after you get it
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

@@ -146,7 +146,7 @@ export default function Home(){
                   <div>₹ {p.price}</div>
                 </div>
                 <div style={{fontSize:12,opacity:.7,marginTop:4}}>{p.rating.toFixed(1)} ★ {p.is_fast_delivery?'• Fast':''} {p.is_new?'• New':''}</div>
-                {p.offer_pct>0 && <div style={{fontSize:12, color:'#2f855a', marginTop:4}}>{p.offer_pct}% OFF</div>}
+                {p.offer_pct>0 && <div style={{fontSize:12, color:'#f97316', marginTop:4}}>{p.offer_pct}% OFF</div>}
 
                 <div className="btn" style={{marginTop:8}} onClick={()=>add(p)}>Add to Cart</div>
 
